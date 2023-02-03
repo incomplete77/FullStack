@@ -1,0 +1,29 @@
+img {
+    width: 125px;
+    float: left;
+}
+
+h1 {
+    margin-bottom: -15px;
+}
+
+#Heading {
+    transform: translateY(20px);
+}
+
+#a {
+    text-decoration: none;
+    border: 2px solid rgb(224, 118, 12);
+    background-color: orange;
+    border-radius: 95px;
+    padding: 10px;
+}
+
+#link {
+    float: right;
+    margin-top: -10px;
+}
+
+p {
+    font-size: 18px;
+}
