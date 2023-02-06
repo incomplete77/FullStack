@@ -1,0 +1,39 @@
+nav {
+    float: right;
+    font-size: 18px;
+    margin-right: 25PX;
+    color: #fef8f8;
+    margin-top: -20px;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.p1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 105px;
+    margin-top: 130px;
+}
+
+span {
+    color: rgb(15, 11, 240);
+}
+
+.p2 {
+    margin-left: 105px;
+    font-size: 18px;
+}
+
+.P3 {
+    margin-left: 115PX;
+    margin-top: 5OPX;
+    color: #fef8f8;
+    background-color: rgb(15, 11, 240);
+    width: 150px;
+    height: 20px;
+    text-align: center;
+    padding: 5px;
+}
