@@ -18,7 +18,7 @@ body {
     margin-top: 130px;
 }
 
-span {
+.span1 {
     color: rgb(15, 11, 240);
 }
 
@@ -36,4 +36,58 @@ span {
     height: 20px;
     text-align: center;
     padding: 5px;
+}
+
+.d1 {
+    width: 225px;
+    height: 250px;
+    float: right;
+    background-color: white;
+    border: 2px solid aqua;
+    margin-right: 300px;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.get {
+    background-color: aqua;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -0px;
+}
+
+.next {
+    border: 2px solid rgb(15, 11, 240);
+    background-color: rgb(15, 11, 240);
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    margin-left: 12px;
+    margin-top: 35px;
+}
+
+.Hr {
+    margin-top: 500px;
+}
+
+img {
+    margin: -2px;
+}
+
+.span2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.online {
+    color: rgb(27, 221, 27);
+}
+
+.life {
+    margin-left: 50px;
+    color: #fef8f8;
 }
