@@ -8,27 +8,28 @@ body {
     background-image: url(./index.jpg);
 }
 
+.task-page {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 h2 {
     border: 2px solid black;
     width: 250px;
     text-align: center;
     background-color: aqua;
-    padding: 5px;
+    padding: 10px;
     border-radius: 35px;
 }
 
-.u1 {
+ul {
     font-size: 30px;
     list-style-type: "\1F449";
-
-}
-
-li {
-    margin: 10px;
-    color: aqua;
+    margin-left: 20px;
 
 }
 
 a {
-    color: aqua;
+    color: rgb(163, 131, 25);
 }

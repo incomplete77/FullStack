@@ -1,0 +1,64 @@
+h3 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 200%;
+    font-weight: 100;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 5opx;
+    font-weight: bolder;
+    font-size: 300%;
+}
+
+p {
+    text-align: center;
+    font-size: 150%;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+div {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 5%;
+}
+
+.input1 {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid blue;
+    background-color: blue;
+    color: aliceblue;
+    width: 100%;
+    height: 40px;
+    font-size: 150%;
+
+
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    color: #aea8a8;
+    margin: 10px;
+    font-size: 120%;
+
+}
+
+a :hover {
+    color: blue;
+}

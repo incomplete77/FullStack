@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Music Competition</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <h1>Music Competition</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="#">Results</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form action="index.html" style="background-color: darkgrey;">
+        <h2>Music Competition Registration</h2>
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="instrument">Instrument:</label>
+            <input type="text" id="instrument" name="instrument" required>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Years of Experience:</label>
+            <select id="experience" name="experience">
+                <option value="0-1">0-1 years</option>
+                <option value="2-5">2-5 years</option>
+                <option value="6-10">6-10 years</option>
+                <option value="11+">11+ years</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="genre">Preferred Music Genre:</label>
+            <input type="text" id="genre" name="genre" required>
+        </div>
+
+        <div class="form-group">
+            <label for="song">Song Selection:</label>
+            <input type="text" id="song" name="song" required>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+</body>
+
+</html>
