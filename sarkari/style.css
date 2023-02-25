@@ -247,6 +247,7 @@ td {
     margin: 20px auto 10px auto;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 
 }
 
@@ -299,6 +300,7 @@ ul a {
     grid-template-columns: repeat(3, 300px);
     justify-content: center;
     gap: 10px 20px;
+
 
 
 }

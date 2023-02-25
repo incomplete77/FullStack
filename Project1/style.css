@@ -1,6 +1,6 @@
 header {
-    background-color: #333;
-    color: #fff;
+    background-image: linear-gradient(rgb(222, 222, 100), rgb(233, 233, 30), rgb(212, 212, 95));
+    color: #090909;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +23,7 @@ nav li {
 }
 
 nav a {
-    color: #fff;
+    color: #0a0a0a;
     text-decoration: none;
 }
 
@@ -34,7 +34,7 @@ main {
 }
 
 .banner {
-    background-color: aquamarine;
+    background-color: rgb(246, 255, 127);
     padding: 20px;
     text-align: center;
     margin-bottom: 20px;
@@ -59,14 +59,52 @@ main {
     text-decoration: none;
 }
 
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 350px;
+    padding: 1rem;
+    gap: 1rem;
+    justify-items: center;
+}
 
+.card {
+    background-image: linear-gradient(120deg, #FACD68, #FC76B3);
+    width: 100%;
+    text-align: center;
+    border-radius: 25px;
+    font-size: 25px;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.card .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .3;
+}
+
+.card .card-text {
+    color: white;
+    text-shadow: 1px 2px 2px black;
+}
 
 
 form {
     max-width: 600px;
     margin: 0 auto;
     padding: 30px;
-    background- border-radius: 10px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
