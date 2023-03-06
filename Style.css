@@ -18,7 +18,7 @@ h2 {
     border: 2px solid black;
     width: 250px;
     text-align: center;
-    background-image: radial-gradient(#FF9933, #FFFFFF, #138808);
+    background-color: rgb(149, 155, 161);
     padding: 10px;
     border-radius: 35px;
     font-weight: bold;
@@ -36,5 +36,5 @@ a {
 }
 
 a:hover {
-    color: #138808;
+    color: #430fc7;
 }
