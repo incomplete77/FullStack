@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Mathematics</h1>
+    </div>
+    <div class="first-number">
+        <h2>first-number</h2>
+    </div>
+    <div class="second-number">
+        <h2>second-number</h2>
+    </div>
+    <div class="sum">
+        <h2>sum</h2>
+    </div>
+    <div class="sub">
+        <h2>sub</h2>
+    </div>
+    <div class="mul">
+        <h2>mul</h2>
+    </div>
+    <div class="div">
+        <h2>div</h2>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+        const firstNumber = document.querySelector('.first-number h2')
+        const secondNumber = document.querySelector('.second-number h2')
+        const a = Number(prompt('Enter The First Number'))
+        const b = Number(prompt('Enter The Second Number'))
+        const sum = document.querySelector('.sum h2')
+        const sub = document.querySelector('.sub h2')
+        const mul = document.querySelector('.mul h2')
+        const div = document.querySelector('.div h2')
+        let s = {
+            name: 'shashi',
+            branch: 'cse',
+            roll: 21339
+        };
+        document.write(s.name + ' ' + s.branch)
+
+
+
+        firstNumber.textContent = `${a}`
+        secondNumber.textContent = `${b}`
+        sum.textContent = ` Sum = ${a + b}`
+        sub.textContent = ` Subtraction = ${a - b}`
+        mul.textContent = ` Multiplication = ${a * b}`
+        div.textContent = ` Division = ${a / b}`
+
+    </script>
+</body>
+
+</html>

@@ -31,10 +31,10 @@ ul {
 
 }
 
-a {
-    color: #000080;
-}
+
 
 a:hover {
-    color: #430fc7;
+    color: #120fc7;
+    zoom: 1.5;
+    text-decoration: none;
 }

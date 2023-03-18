@@ -69,11 +69,16 @@ main {
     justify-items: center;
 }
 
+.card:hover {
+    zoom: 3;
+    text-shadow: 2px 3px 2px rgb(5, 5, 5);
+}
+
 .card {
-    background-color: #ccc;
+    background-color: rgb(245, 252, 157);
     width: 100%;
     text-align: center;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     font-size: 25px;
     font-weight: bold;
     display: grid;
@@ -93,12 +98,12 @@ main {
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: .3;
+    opacity: .7;
 }
 
 .card .card-text {
-    color: white;
-    text-shadow: 1px 2px 2px rgb(64, 198, 222);
+    color: aqua;
+
 }
 
 
