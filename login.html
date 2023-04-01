@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            width: 100%;
+            height: 100%;
+            background: #e47676;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+        }
+
+        form.hidden {
+            display: none;
+        }
+
+        .page {
+            width: 100%;
+            height: 100%;
+        }
+
+        .page.hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="get">
+        <h1>message</h1>
+        <input type="text" id="username" placeholder="username">
+        <input type="password" id="password" placeholder="password">
+        <input type="button" id="login" value="login" onclick="logIn()">
+    </form>
+    <div class="page ">
+        <h1>hidden page</h1>
+    </div>
+
+
+    <script>
+        const user = {
+            username: 'shashi',
+            password: 1234
+        }
+        function logIn(e) {
+            const userInput = document.querySelector('#username');
+            const passInput = document.querySelector('#password')
+            const message = document.querySelector('h1')
+            const form = document.querySelector('form')
+
+            if (userInput.value === user.username) {
+                if (Number(passInput.value) === user.password) {
+                    message.textContent = "Login Successfull"
+                    form.classList.add('hidden')
+                }
+                else {
+                    message.innerText = "incorrect Password"
+                }
+            }
+            else message.innerText = "You are not registered"
+
+        }
+    </script>
+</body>
+
+</html>

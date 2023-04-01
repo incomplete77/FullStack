@@ -3,9 +3,11 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="./music.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>login</title>
     <style>
         * {
@@ -16,8 +18,8 @@
         }
 
         body {
-
-            background: #5a5555;
+            min-height: 100vh;
+            background: #0c192c;
         }
 
         .box {
@@ -27,8 +29,7 @@
             background: #1c1c1c;
             border-radius: 8px;
             overflow: hidden;
-            margin-left: auto;
-            margin-right: auto;
+
         }
 
         .box::before {
@@ -41,7 +42,7 @@
             background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
             z-index: 1;
             transform-origin: bottom right;
-            animation: animate 6s linear infinite;
+            animation: rotate 6s linear infinite;
         }
 
         .box::after {
@@ -54,7 +55,7 @@
             background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
             z-index: 1;
             transform-origin: bottom right;
-            animation: animate 6s linear infinite;
+            animation: rotate 6s linear infinite;
             animation-delay: -3s;
         }
 
@@ -74,7 +75,7 @@
             background: linear-gradient(0deg, transparent, transparent, #ff2770, #ff2770, #ff2770);
             z-index: 1;
             transform-origin: bottom right;
-            animation: animate 6s linear infinite;
+            animation: rotate 6s linear infinite;
             animation-delay: -1.5s;
         }
 
@@ -88,11 +89,11 @@
             background: linear-gradient(0deg, transparent, transparent, #ff2770, #ff2770, #ff2770);
             z-index: 1;
             transform-origin: bottom right;
-            animation: animate 6s linear infinite;
+            animation: rotate 6s linear infinite;
             animation-delay: -4.5s;
         }
 
-        @keyframes animate {
+        @keyframes rotate {
             0% {
                 transform: rotate(0deg);
             }
@@ -112,6 +113,8 @@
             z-index: 2;
             display: flex;
             flex-direction: column;
+            justify-self: center;
+            align-self: center;
         }
 
         .box form h2 {
@@ -183,6 +186,8 @@
         .box form .link {
             display: flex;
             justify-content: space-between;
+            font-size: 24px;
+            margin: 10px;
         }
 
         .box form .link a {
@@ -209,10 +214,74 @@
             width: 100px;
             margin-top: 10px;
 
+
         }
 
         .box form input[type="submit"]:active {
             opacity: 0.8;
+
+        }
+
+        .box form input[type="submit"] {
+            font-size: 24px;
+            width: 100px;
+            background-color: rgb(50, 62, 222);
+            color: #fff;
+
+
+
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(to left, #0c192c, #040a13);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .bubble {
+            position: absolute;
+            top: -30px;
+            display: flex;
+        }
+
+        .bubble span {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background: #4fc3dc;
+            margin: 0 4px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 10px hsl(var(--hue), 100%, 60%);
+            box-shadow: 0 0 50px hsl(var(--hue), 100%, 60%);
+            box-shadow: 0 0 100px hsl(var(--hue), 100%, 60%);
+            animation: animate 15s linear infinite;
+            background: hsl(var(--hue), 90%, 60%);
+            animation-duration: calc(102s/var(--i));
+        }
+
+        /* .bubble span:nth-child(even) {
+            background: #ff2d75;
+            box-shadow: 0 0 0 10px #ff2d7544;
+            box-shadow: 0 0 50px #ff2d75;
+            box-shadow: 0 0 100px #ff2d75;
+        } */
+
+
+
+        @keyframes animate {
+            0% {
+                transform: translateY(100vh) scale(0);
+            }
+
+            100% {
+                transform: translateY(0) scale(1);
+            }
         }
     </style>
 </head>
@@ -228,27 +297,73 @@
             </ul>
         </nav>
     </header>
-    <div class="box">
-        <span class="borderline"></span>
-        <form>
-            <h2>Login</h2>
-            <div class="inputbox">
-                <input type="text" name="" required="">
-                <span>Username</span>
-                <i></i>
-            </div>
-            <div class="inputbox">
-                <input type="password" name="" required="">
-                <span>Password</span>
-                <i></i>
-            </div>
-            <div class="link">
-                <a href="#">Forgot Password</a>
-                <a href="#">Singup</a>
-            </div>
-            <input type="submit" value="Submit">
-        </form>
+    <div class="container">
+        <div class="box">
+            <span class="borderline"></span>
+            <form>
+                <h2>Login</h2>
+                <div class="inputbox">
+                    <input type="text" name="" required="">
+                    <span>Username</span>
+                    <i></i>
+                </div>
+                <div class="inputbox">
+                    <input type="password" name="" required="">
+                    <span>Password</span>
+                    <i></i>
+                </div>
+                <div class="link">
+                    <a href="#">Forgot Password</a>
+                    <a href="./Registration.html">Singup</a>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div class="bubble">
+            <span style="--i:11;--hue:120deg"></span>
+            <span style="--i:12;--hue:10deg"></span>
+            <span style="--i:24;--hue:210deg"></span>
+            <span style="--i:10;--hue:160deg"></span>
+            <span style="--i:14;--hue:260deg"></span>
+            <span style="--i:23;--hue:90deg"></span>
+            <span style="--i:18;--hue:220deg"></span>
+            <span style="--i:16;--hue:176deg"></span>
+            <span style="--i:19;--hue:110deg"></span>
+            <span style="--i:20;--hue:210deg"></span>
+            <span style="--i:22;--hue:310deg"></span>
+            <span style="--i:25;--hue:160deg"></span>
+            <span style="--i:18;--hue:135deg"></span>
+            <span style="--i:21;--hue:235deg"></span>
+            <span style="--i:15;--hue:305deg"></span>
+            <span style="--i:13;--hue:105deg"></span>
+            <span style="--i:26;--hue:189deg"></span>
+            <span style="--i:17;--hue:265deg"></span>
+            <span style="--i:13;--hue:109deg"></span>
+            <span style="--i:18;--hue:208deg"></span>
+            <span style="--i:12;--hue:124deg"></span>
+            <span style="--i:13;--hue:140deg"></span>
+            <span style="--i:11;--hue:195deg"></span>
+            <span style="--i:19;--hue:125deg"></span>
+            <span style="--i:13;--hue:65deg"></span>
+            <span style="--i:21;--hue:155deg"></span>
+            <span style="--i:17;--hue:295deg"></span>
+            <span style="--i:10;--hue:105deg"></span>
+            <span style="--i:16;--hue:245deg"></span>
+            <span style="--i:19;--hue:185deg"></span>
+            <span style="--i:15;--hue:175deg"></span>
+            <span style="--i:18;--hue:295deg"></span>
+            <span style="--i:17;--hue:235deg"></span>
+            <span style="--i:14;--hue:205deg"></span>
+            <span style="--i:7;--hue:315deg"></span>
+            <span style="--i:21;--hue:75deg"></span>
+            <span style="--i:18;--hue:105deg"></span>
+            <span style="--i:15;--hue:165deg"></span>
+            <span style="--i:11;--hue:205deg"></span>
+
+        </div>
     </div>
+
 </body>
 
 </html>
