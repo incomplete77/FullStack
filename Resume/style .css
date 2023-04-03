@@ -1,0 +1,43 @@
+.name span {
+    margin-top: 20px;
+    font-size: 27px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.name {
+    text-align: center;
+}
+
+hr {
+    height: 3px;
+    background: black;
+    width: 80%;
+    /* margin-top: 20px; */
+}
+
+.about {
+    display: flex;
+    /* justify-content: center;
+    text-align: center; */
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
+.header {
+    font-weight: bold;
+}
+
+ul span {
+    font-weight: bold;
+    margin-left: -20px;
+}
+
+ul li {
+    margin-top: 10px;
+}
+
+.edu {
+    list-style-type: "\1f846";
+}

@@ -14,8 +14,8 @@ header {
 
 body {
     min-height: 100vh;
-    background-color: #0c192c;
-    color: #ccc;
+    /* background-color: #0c192c; */
+    /* color: #ccc; */
 }
 
 nav ul {
@@ -102,7 +102,7 @@ main {
 }
 
 .card {
-    background-color: rgb(119, 101, 82);
+    background-color: rgb(217, 200, 188);
     width: 100%;
     text-align: center;
     /* border-radius: 25px; */
@@ -115,6 +115,7 @@ main {
     overflow: hidden;
     text-decoration: none;
     border: 2px solid black;
+    border-radius: 10px;
     transition: .3s;
 }
 
@@ -151,6 +152,7 @@ h2 {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
+
 }
 
 .form-group {
