@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics</title>
+</head>
+
+<body>
+    <script>
+        // print name and address
+        let name = "Shashi Gaurav";
+        let address = "Gaya";
+        document.write('Name = ', name, '<br>', 'Address = ', address);
+
+
+        document.write('<br><br>')
+        // check value and data type is same 
+        const data1 = 25;
+        const data2 = 25;
+
+
+        document.write("data1 = '25' and data2 = 25")
+
+        if (data1 === data2) {
+            document.write('<br>')
+            document.write('datatype of data1 is equal to data2')
+        }
+        else {
+            document.write('<br>')
+            document.write('datatype of data1 is not equal to data2')
+
+        }
+
+        document.write('<br><br>')
+        // add to string and capitalize
+        const string1 = prompt("Enter first string");
+        const string2 = prompt("Enter second string");
+
+        document.write('string1 = ' + string1, '<br>', 'string2 = ' + string2, '<br>')
+
+        const newstring = (string1 + string2).toUpperCase()
+
+        document.write('added String = ', newstring);
+
+
+        document.write('<br><br>')
+        // convert length of string in bytes
+        const string = prompt("Enter a string to get its size in bytes");
+        const stringbyte = string.length;
+        document.write('string = ', string, '<br>');
+        document.write('string byte size = ', stringbyte * 2);
+
+
+        document.write('<br><br>')
+        // round number
+        const number = parseFloat(prompt("Enter a floating decimal number"));
+        const round = parseInt(prompt("Enter number of digits to round"));
+        document.write('number = ', number, '<br>', 'round digit = ', round, '<br>');
+        const roundednumber = number.toFixed(round);
+        document.write('rounded number = ', roundednumber);
+
+
+
+    </script>
+
+</body>
+
+</html>

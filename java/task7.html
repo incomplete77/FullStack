@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM & Events</title>
+    <style>
+        body {
+            /* color: rgb(206, 64, 64); */
+            background-color: #e5e2e9;
+
+        }
+
+        .main {
+            width: 800px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .date {
+            background: #e5e2e9;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+            background: #7a767e;
+            padding: 10px;
+            border-radius: 10px;
+            color: black;
+        }
+
+        .container p {
+            font-size: 18px;
+        }
+
+        .container img {
+            width: 200px;
+            align-self: center;
+        }
+
+        .output {
+            padding: 0;
+            border-radius: 1px solid rgb(170, 158, 158);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+            background: #97949b;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .output h1 {
+            text-align: center;
+            margin: 0;
+            /* color: black; */
+        }
+
+        .output div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input::placeholder {
+            color: rgb(11, 11, 11);
+        }
+
+        input,
+        button {
+            padding: 7px;
+            background: transparent;
+            border: 1px solid white;
+            color: rgb(21, 20, 20);
+            border-radius: 10px;
+        }
+
+        button {
+            background: #172f52;
+            color: rgb(211, 199, 199);
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="date"></div>
+        <div class="output">
+            <h1>Output</h1>
+            <div></div>
+        </div>
+        <div class="container">
+            <p>Change my size</p>
+            <button onclick="increaseFont()">+</button>
+            <button onclick="decreaseFont()">-</button>
+        </div>
+        <div class="container">
+            <input type="text" placeholder="enter name" id="name">
+            <input type="text" placeholder="enter address" id="address">
+            <button onclick="printname()">Print Name & Address</button>
+        </div>
+        <div class="container">
+            <input type="text" placeholder="enter string 1" id="string-1">
+            <input type="text" placeholder="enter string 2" id="string-2">
+            <button onclick="addstring()">Add & Capitalize</button>
+        </div>
+        <div class="container">
+            <input type="text" placeholder="enter a string" id="string-length">
+            <button onclick="getlength()">Get Length Byte</button>
+        </div>
+        <div class="container">
+            <input type="text" placeholder="enter number" id="round-number">
+            <input type="text" placeholder="enter round off digit" id="round-digit">
+            <button onclick="roundup()">Round</button>
+        </div>
+        <div class="container">
+            <img src="https://picsum.photos/200" alt="changeable image">
+            <button onclick="changeImage()">change image</button>
+        </div>
+    </div>
+
+    <script>
+
+        const name = document.querySelector('#name');
+        const address = document.querySelector('#address');
+        const string1 = document.querySelector('#string-1');
+        const string2 = document.querySelector('#string-2');
+        const string = document.querySelector('#string-length');
+        const roundnumber = document.querySelector('#round-number');
+        const rounddigit = document.querySelector('#round-digit');
+        const text = document.querySelector('.container p');
+        const img = document.querySelector('.container img');
+
+        const output = document.querySelector('.output div');
+
+        function printname() {
+            output.innerHTML = `<br><span><b>Name = </b>${name.value}</span><span><b>Address = </b>${address.value}</span>`
+        }
+        function addstring() {
+            output.innerHTML = `<br><span><b>New Capitalize String = </b>${(string1.value + string2.value).toUpperCase()}</span>`
+        }
+        function getlength() {
+            output.innerHTML = `<br><span><b>Length of String = </b>${(string.value.length) * 2} byte</span>`
+        }
+        function roundup() {
+            output.innerHTML = `<br><span><b>Rounded Value = </b>${parseFloat(roundnumber.value).toFixed(parseInt(rounddigit.value))}</span>`
+        }
+
+        function changeImage() {
+            let id = Math.floor(Math.random() * 1000);
+
+            img.src = `https://picsum.photos/id/${id}/200`
+
+        }
+        function increaseFont() {
+            let currentsize = getComputedStyle(text)["fontSize"].split('px')[0];
+            currentsize++;
+            text.style.fontSize = currentsize + 'px';
+        }
+        function decreaseFont() {
+            let currentsize = getComputedStyle(text)["fontSize"].split('px')[0];
+            currentsize--;
+            text.style.fontSize = currentsize + 'px';
+
+        }
+        function showDate() {
+            const datediv = document.querySelector('.date');
+            let date = new Date().toLocaleString();
+            datediv.innerHTML = date;
+            setInterval(() => {
+                date = new Date().toLocaleString();
+                datediv.innerHTML = date;
+            }, 1000);
+        }
+        showDate();
+
+    </script>
+
+</body>
+
+</html>

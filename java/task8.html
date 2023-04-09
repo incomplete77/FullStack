@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exception handling</title>
+    <style>
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+            background: #77757a;
+            padding: 10px;
+
+            color: rgb(0, 0, 0);
+        }
+
+
+
+        h1 {
+            text-align: center;
+            margin: 0;
+        }
+
+        input,
+        button {
+            padding: 7px;
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+
+        }
+
+        button {
+            background: #220ce5;
+            color: rgb(250, 243, 243);
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="output"></div>
+        <input type="number" id="divisor" placeholder="divisor">
+        <input type="number" id="dividor" placeholder="dividor">
+        <button onclick="divide()">divide</button>
+    </div>
+    <div class="container">
+        <h1>Guess the number</h1>
+        <div class="output-message"></div>
+        <input id="guess-input" type="text" placeholder="guess the number between 1-50">
+        <button onclick="guessthenum()">Test you Luck</button>
+    </div>
+
+
+    <script>
+
+        document.write('<br><br>')
+        // print undeclared varriable
+        try {
+            let a = 10;
+            document.write('a = ' + a + '<br>');
+            document.write('b = ' + b);
+        }
+        catch (e) {
+            document.write(e)
+        }
+
+        // divide by 0
+        function divide() {
+            const divisor = document.getElementById('divisor')
+            const dividor = document.getElementById('dividor')
+            const output = document.querySelector('.output')
+            try {
+                if (divisor.value === '' || dividor.value === '')
+                    throw ('enter all field')
+                else if (parseInt(dividor.value) === 0) {
+                    throw ('Cannot divide by 0')
+                }
+                output.innerHTML = `${parseInt(divisor.value)} / ${parseInt(dividor.value)} = ${parseInt(divisor.value) / parseInt(dividor.value)}`;
+            } catch (e) {
+                output.innerHTML = e
+            }
+        }
+
+
+        document.write('<br><br>')
+        // out of bond error
+        const arr = [1, 3, 2, 8, 4, 9, 6, 5];
+        try {
+            document.write('<br>array = ', arr);
+            document.write('<br>array[0] = ', arr[0]);
+            document.write('<br>array[5] = ', arr[5]);
+
+            if (arr[8]) {
+                document.write('<br>array[8] = ', arr[8]);
+            }
+            else
+                throw ('try to access index is not present')
+        }
+        catch (e) {
+            document.write('<br>' + e);
+        }
+
+
+        // finally
+        const num = Math.floor(Math.random() * 50)
+        function guessthenum() {
+            const input = document.querySelector('#guess-input')
+            const output = document.querySelector('.output-message')
+            try {
+                if (isNaN((input.value)) || input.value === '') throw 'Enter a valid number'
+                else if (input.value > 50 || input.value < 0) throw 'Number should be in range of 1-50'
+                else {
+                    if (num === parseInt(input.value)) {
+                        output.innerHTML = 'Hurray you have guessed it correctly ' + input.value
+                    }
+                    else if (parseInt(input.value) > num) {
+                        output.innerHTML = 'you guessed a large number ' + input.value
+                    }
+                    else
+                        output.innerHTML = 'you guessed a small number ' + input.value
+
+                }
+
+            }
+            catch (e) {
+                output.innerHTML = e
+            }
+            finally {
+                input.value = ''
+            }
+        }
+
+    </script>
+</body>
+
+</html>

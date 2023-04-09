@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            font-size: 24px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        const arr = [2, 8, 13, 78, 35];
+        document.write('array = ', arr)
+        const sortedarr = arr.sort((a, b) => a - b);
+        document.write('<br>sorted array = ', sortedarr)
+
+
+        document.write('<br><br>');
+
+        const arr1 = [9, 8, 2, 7, 5];
+        const arr2 = [1, 8, 3, 4];
+        const concatenatedarr = [...arr1, arr2];
+        document.write('array 1 = ', arr1, '<br>array 2 = ', arr2)
+        document.write('<br>concatenated array = ', concatenatedarr)
+
+
+        document.write('<br><br>');
+
+        const orignalarr = [9, 8, 2, 7, 5];
+        const modifiedarr = orignalarr.filter((_, index) => {
+            return index > 0;
+        })
+        document.write('orignal array = ', orignalarr)
+        document.write('<br>array with 1st elemment deleted = ', modifiedarr)
+
+    </script>
+
+</body>
+
+</html>
